@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scraper Dashboard</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h2> Quotes Dashborad </h2>
+    <div>
+        {% for row in tables %}
+            {{ row | safe }}
+            <!-- This is equivalent to writing for loop in python   -->
+        {% endfor %}
+    </div>
+</body>
+</html>
